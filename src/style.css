@@ -1,0 +1,330 @@
+.hide {
+    display: none !important;
+}
+.ext-content {
+    margin-top: 20px;
+    display: none;
+}
+
+.ext-table {
+    display: none;
+    margin-top: 20px;
+}
+
+.active {
+    display: block;
+}
+
+.ext-button,
+.ext-button_show,
+.btn {
+    margin-top: 10px;
+    background-color: #8654cc;
+    border: 1px solid #8654cc;
+    border-radius: 8px;
+    color: white;
+    padding: 6px 12px;
+    transition: background-color .15s ease-out;
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    font-family: SB Sans Display, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: normal;
+    line-height: 20px;
+    user-select: none;
+    white-space: nowrap;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    text-align: center;
+}
+
+.btnStart {
+    position: static;
+    right: 0;
+    top: 60%;
+    padding: 10px 5px 10px 15px;
+}
+
+.ext-td-link {
+    color: var(--pui-link-active);
+    cursor: pointer;
+    outline: none;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.ext-priceWhitePromocode {
+    margin-bottom: 10px;
+}
+
+
+.ext-button_show:hover,
+.btn:hover,
+.ext-button:hover {
+    background-color: #6b0ec8;
+}
+
+
+
+table {
+    border-spacing: 0 10px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+}
+
+thead {
+    border: 2px solid black;
+}
+
+.ext-tr__fillter {
+    border-bottom: 2px solid black;
+}
+
+.ext-tr__fillter>th,
+.ext-tr__names>th {
+    padding: 10px 20px;
+    background: #8654cc;
+    color: white;
+    border: 2px solid black;
+    font-size: 0.9em;
+    position: relative;
+}
+
+
+th:first-child {
+    text-align: left;
+}
+
+th:last-child {
+    border-right: none;
+}
+
+td {
+    min-width: 100px;
+    vertical-align: middle;
+    padding: 10px;
+    font-size: 14px;
+    text-align: start;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    border-right: 2px solid black;
+}
+
+th>button {
+    color: #fff;
+}
+
+th>button.active {
+    color: #fff500;
+}
+
+td:first-child {
+    border-left: 2px solid black;
+}
+
+td:nth-child(2) {
+    text-align: left;
+}
+
+.ext-span-img>img {
+    display: inline-block;
+    height: 25px;
+    width: 25px;
+}
+
+.ext-span-img {
+    display: inline-block;
+    margin-left: 15px;
+}
+
+.hoverable {
+    cursor: pointer;
+}
+
+.hoverable:after {
+    content: "";
+    position: absolute;
+    display: block;
+    /*окноизначальноскрыто*/
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    /* центрирование */
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+}
+
+.hoverable:hover:after {
+    display: block;
+    /* показываем окно при наведении */
+}
+
+.hoverable:hover:after img {
+    width: 200px;
+    /* задайте желаемые размеры для картинки */
+    height: 200px;
+    border: 1px solid #000;
+    /* опционально, добавьте рамку */
+    background: #fff;
+    /* опционально, добавьте фон */
+    padding: 10px;
+    /* опционально, добавьте отступы */
+}
+
+.ext-input__wrap {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.ext-input__wrap>input {
+    margin-right: 10px;
+}
+
+.total-price span {
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: normal;
+    line-height: 24px;
+    color: green;
+}
+
+.table_parent__content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.buttonShow_wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.ext-button {
+    min-width: 200px;
+    margin-bottom: 5px;
+}
+
+button:disabled {
+    background-color: rgb(101 62 156);
+}
+
+button:disabled:hover {
+    background-color: #6b0ec8;
+}
+
+.ext-label {
+    user-select: none;
+    display: flex;
+    align-items: center;
+}
+.ext-label input {
+    margin-right: 5px;
+}
+
+.promocode-checkboxes-wrap {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.promocode-checkboxes {
+    margin-right: 5px;
+}
+
+.promocode_wrap {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.promocode-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
+    margin-bottom: 10px;
+}
+
+.promocode_wrap .ext-button {
+    align-self: center;
+}
+
+.promocode-list__title{
+    font-size: 14px;
+    text-align: center;
+    margin: 5px 0 10px;
+}
+
+/* чекбокс промокоды */
+.checkbox.style-e {
+    display: inline-block;
+    position: relative;
+    padding-left: 50px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  .checkbox.style-e input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  .checkbox.style-e input:checked ~ .checkbox__checkmark {
+    background-color: #6b0ec8;
+  }
+  .checkbox.style-e input:checked ~ .checkbox__checkmark:after {
+    left: 21px;
+  }
+  .checkbox.style-e:hover input ~ .checkbox__checkmark {
+    background-color: #eee;
+  }
+  .checkbox.style-e:hover input:checked ~ .checkbox__checkmark {
+    background-color: #6b0ec8;
+  }
+  .checkbox.style-e .checkbox__checkmark {
+    position: absolute;
+    top: 1px;
+    left: 0;
+    height: 20px;
+    width: 40px;
+    background-color: #eee;
+    transition: background-color 0.25s ease;
+    border-radius: 11px;
+  }
+  .checkbox.style-e .checkbox__checkmark:after {
+    content: "";
+    position: absolute;
+    left: 3px;
+    top: 3px;
+    width: 14px;
+    height: 14px;
+    display: block;
+    background-color: #fff;
+    border-radius: 50%;
+    transition: left 0.25s ease;
+  }
+  .checkbox.style-e .checkbox__body {
+    color: #333;
+    line-height: 1.4;
+    font-size: 13px;
+    text-transform: uppercase;
+    transition: color 0.25s ease;
+  }
+  .select-button {
+    align-self: center;
+  }
+
+

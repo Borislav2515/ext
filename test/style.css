@@ -1,0 +1,33 @@
+.hoverable {
+  position: relative;
+  cursor: pointer;
+}
+
+.hoverable:after {
+  content: "";
+  position: absolute;
+  display: none;
+  /* окно изначально скрыто */
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  /* центрирование */
+}
+
+.hoverable:hover:after {
+  display: block;
+  /* показываем окно при наведении */
+}
+
+.hoverable:hover:after img {
+  width: 200px;
+  /* задайте желаемые размеры для картинки */
+  height: auto;
+  border: 1px solid #000;
+  /* опционально, добавьте рамку */
+  background: #fff;
+  /* опционально, добавьте фон */
+  padding: 10px;
+  /* опционально, добавьте отступы */
+}
+
