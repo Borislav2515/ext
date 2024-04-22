@@ -1,0 +1,10 @@
+{
+    "name": {
+        "message": "Megamarket",
+        "description": "Search for deals"
+    },
+    "description": {
+        "message": "Search for deals",
+        "description": "Description of the search engine"
+    }
+}

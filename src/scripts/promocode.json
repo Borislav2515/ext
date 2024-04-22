@@ -1,0 +1,74 @@
+{
+    "АПРЕЛЬМЕГА": [
+        { "discount": 1000, "price_to": 6000, "price_after": 6000 },
+        { "discount": 2000, "price_to": 11000, "price_after": 11000 },
+        { "discount": 3000, "price_to": 16000, "price_after": 16000 },
+        { "discount": 4000, "price_to": 20000, "price_after": 20000 }
+    ],
+    "УЖЕВЕСНА": [
+        { "discount": 1000, "price_to": 5000, "price_after": 5000 },
+        { "discount": 3000, "price_to": 14000, "price_after": 14000 },
+        { "discount": 5000, "price_to": 27000, "price_after": 27000 },
+        { "discount": 7000, "price_to": 35000, "price_after": 35000 }
+    ],
+    "ЦВЕТОЧКИ": [
+        { "discount": 2000, "price_to": 11000, "price_after": 11000 },
+        { "discount": 5000, "price_to": 30000, "price_after": 30000 },
+        { "discount": 9000, "price_to": 50000, "price_after": 50000 },
+        { "discount": 12000, "price_to": 75000, "price_after": 75000 }
+    ],
+    "собачки": [
+        { "discount": 1000, "price_to": 6000, "price_after": 6000 },
+        { "discount": 4000, "price_to": 20000, "price_after": 20000 },
+        { "discount": 7000, "price_to": 34000, "price_after": 34000 },
+        { "discount": 9000, "price_to": 50000, "price_after": 50000 }
+    ],
+    "НЕШУТКИ": [
+        { "discount": 1000, "price_to": 5000, "price_after": 5000 },
+        { "discount": 3000, "price_to": 14000, "price_after": 14000 },
+        { "discount": 5000, "price_to": 27000, "price_after": 27000 },
+        { "discount": 7000, "price_to": 35000, "price_after": 35000 }
+    ],
+    "ОБНОВЛЕНИЕ": [
+        { "discount": 1000, "price_to": 5000, "price_after": 5000 }
+    ],
+    "АПРЕЛЬ10": [
+        { "discount": 1000, "price_to": 5000, "price_after": 5000 }
+    ],
+    "ВЫГОДА10": [
+        { "discount": 1000, "price_to": 6000, "price_after": 6000 }
+    ],
+    "АПРЕЛЬ": [
+        { "discount": 500, "price_to": 3000, "price_after": 3000 }
+    ],
+    "АПРЕЛЬ24": [
+        { "discount": 500, "price_to": 3000, "price_after": 3000 }
+    ],
+    "АПРЕЛЬ500": [
+        { "discount": 500, "price_to": 3000, "price_after": 3000 }
+    ],
+    "КАПЕЛЬ": [
+        { "discount": 2000, "price_to": 10000, "price_after": 10000 },
+        { "discount": 4000, "price_to": 20000, "price_after": 20000 },
+        { "discount": 6000, "price_to": 30000, "price_after": 30000 },
+        { "discount": 8000, "price_to": 40000, "price_after": 40000 }
+    ],
+    "акогдатепло": [
+        { "discount": 1000, "price_to": 6000, "price_after": 6000 },
+        { "discount": 2000, "price_to": 11000, "price_after": 11000 },
+        { "discount": 3000, "price_to": 16000, "price_after": 16000 },
+        { "discount": 4000, "price_to": 20000, "price_after": 20000 }
+    ],
+    "ГРАЧИ": [
+        { "discount": 1000, "price_to": 6000, "price_after": 6000 },
+        { "discount": 4000, "price_to": 20000, "price_after": 20000 },
+        { "discount": 7000, "price_to": 34000, "price_after": 34000 },
+        { "discount": 9000, "price_to": 50000, "price_after": 50000 }
+    ],
+    "КОТИКИ": [
+        { "discount": 500, "price_to": 2000, "price_after": 2000 },
+        { "discount": 1000, "price_to": 4000, "price_after": 4000 },
+        { "discount": 2000, "price_to": 8000, "price_after": 8000 },
+        { "discount": 3000, "price_to": 13000, "price_after": 13000 }
+    ]
+}

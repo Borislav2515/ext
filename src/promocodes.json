@@ -1,0 +1,44 @@
+{
+    "СЕЛЬДЬ": [
+        {
+            "discount": 1000,
+            "price_from": 8000
+        },
+        {
+            "discount": 2000,
+            "price_from": 17000
+        },
+        {
+            "discount": 3000,
+            "price_from": 25000
+        },
+        {
+            "discount": 4000,
+            "price_from": 30000
+        }
+    ],
+    "ИКРА": [
+        {
+            "discount": 2000,
+            "price_from": 11000
+        },
+        {
+            "discount": 5000,
+            "price_from": 30000
+        },
+        {
+            "discount": 9000,
+            "price_from": 50000
+        },
+        {
+            "discount": 12000,
+            "price_from": 75000
+        }
+    ],
+    "Carshering": [
+        {
+            "discount": 1000,
+            "price_from": 9000
+        }
+    ]
+}
