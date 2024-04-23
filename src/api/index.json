@@ -1,0 +1,12 @@
+{
+    "productCardsArr": ".catalog-items-list > div:not(.catalog-item_out-of-stock):not(.catalog-item_banner):not(.catalog-item_banner)",
+    "name": ".catalog-item-regular-desktop__main-info > a.ddl_product_link",
+    "nameLink": ".catalog-item-regular-desktop__main-info > a.ddl_product_link",
+    "shop": ".merchant-info__name",
+    "shopLink": ".catalog-item__merchant-info",
+    "price": ".catalog-item-regular-desktop__price",
+    "bonusPercent": ".bonus-percent",
+    "btnMoreProduct": ".catalog-items-list__show-more",
+    "parent": ".catalog-listing-controls"
+  }
+  
