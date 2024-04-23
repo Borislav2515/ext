@@ -52,14 +52,21 @@ const handleMutation = function(mutationsList, observer) {
     }
 };
 
-btnStart.addEventListener('click', function() {
-    const targetElement = document.querySelector('.catalog-items-list > div:first-child .catalog-item-photo img:first-child');
-    if (targetElement) {
-        startApp();
-        btnStart.disabled = true;
-        promocodes = [];
+btnStart.addEventListener('click', async function() {
+    try {
+        const response = await fetch('https://raw.githubusercontent.com/Borislav2515/ext/main/src/api/index.json');
+        if (!response.ok) {
+            throw new Error('Ошибка загрузки файла');
+        }
+        const data = await response.json();
+        
+        // Вызываем функцию startApp() и передаем ей переменные через деструктуризацию объекта
+        startApp(data);
+    } catch (error) {
+        console.error('Ошибка загрузки файла:', error);
     }
 });
+
 
 // Наблюдатель за изменениями DOM
 const observer = new MutationObserver(handleMutation);
@@ -114,19 +121,9 @@ const apiUrl = 'https://borislav2515.github.io/tour/promocode.json';
     });
 
     
-    fetch('https://raw.githubusercontent.com/Borislav2515/ext/main/src/api/index.js')
-    .then(response => response.text())
-    .then(data => {
-        // Выполняем загруженный код
-        eval(data);
-        console.log(name);
-    })
-    .catch(error => {
-        console.error('Ошибка загрузки скрипта:', error);
-    });
-
-
-
+    function processData(data) {
+        console.log(data);
+    }
 
 
 window.addEventListener('load', function() {
@@ -152,16 +149,16 @@ window.addEventListener('load', function() {
 
 
 
-function startApp() {
+function startApp(productCardsArr, name, nameLink, shop, shopLink, price, bonusPercent, btnMoreProduct, parent) {
     data_items = [];
     productCards = [];
     let promoValActive = true;
     let unusedPromocodes = [];
 
 
-    productCards = Array.from(document.querySelectorAll('.catalog-items-list > div:not(.catalog-item_out-of-stock):not(.catalog-item_banner):not(.catalog-item_banner'));
+    productCards = Array.from(document.querySelectorAll(productCardsArr));
 
-    const table_parent = getElement('.catalog-listing-controls');
+    const table_parent = getElement(parent);
     const table_parent__content = createElementBlock('div', 'table_parent__content');
 
     const buttonShow_wrap = createElementBlock('div', 'buttonShow_wrap');
@@ -392,7 +389,7 @@ function startApp() {
         };
 
         function parsingData() {
-            productCards = Array.from(document.querySelectorAll('.catalog-items-list > div:not(.catalog-item_out-of-stock):not(.catalog-item_banner):not(.catalog-item_banner'));
+            productCards = Array.from(document.querySelectorAll(productCardsArr));
             if (!productCards || productCards.length === 0) {
                 console.log('Карточек нет или массив пуст');
                 return;
@@ -402,33 +399,26 @@ function startApp() {
                 let productID = card.id;
                 const exists = data_items.some(item => item.id === productID);
                 if (!exists) {
-                    let name = card.querySelector('.catalog-item-regular-desktop__main-info > a.ddl_product_link');
+                    let name = card.querySelector(name);
                     if (name !== null) {
                         name = name.innerText.replace(/[%\u20BD]/g, '');
                     }
 
-                    let namelink = card.querySelector('.catalog-item-regular-desktop__main-info > a.ddl_product_link') !== null ? card.querySelector('.catalog-item-regular-desktop__main-info > a.ddl_product_link').href : 'https://megamarket.ru/';
+                    let namelink = card.querySelector(nameLink) !== null ? card.querySelector(nameLink).href : 'https://megamarket.ru/';
 
-                    // let shop = card.querySelector('.merchant-info__name')?.innerText || 'Неизвестен';
-                    let shop = card.querySelector('.merchant-info__name') !== null ? card.querySelector('.merchant-info__name').innerText : 'Неизвестен';
+                    let shop = card.querySelector(shop) !== null ? card.querySelector(shop).innerText : 'Неизвестен';
                     
-                    // let shopLink = card.querySelector('.catalog-item__merchant-info')?.href || 'Неизвестен';
-                    let shopLink = card.querySelector('.catalog-item__merchant-info') !== null ? card.querySelector('.catalog-item__merchant-info').href : 'https://megamarket.ru/';
+                    let shopLink = card.querySelector(shopLink) !== null ? card.querySelector(shopLink).href : 'https://megamarket.ru/';
 
-                    // let price = parseInt(card.querySelector('.item-price > span').innerText.replace(/[^\d]/g, '').trim());
-                    let price = card.querySelector('.catalog-item-regular-desktop__price') !== null ? parseInt(card.querySelector('.catalog-item-regular-desktop__price').innerText.replace(/[^\d]/g, '').trim()) : '-';
+                    let price = card.querySelector(price) !== null ? parseInt(card.querySelector(price).innerText.replace(/[^\d]/g, '').trim()) : '-';
                     let promo = '';
-
 
                     if (promoValActive === true) {
                         price = getBestDiscount(parseInt(card.querySelector('.catalog-item-regular-desktop__price').innerText.replace(/[^\d]/g, '').trim()), promocodes,'price');
                         promo = getBestDiscount(parseInt(card.querySelector('.catalog-item-regular-desktop__price').innerText.replace(/[^\d]/g, '').trim()), promocodes,'promo')
                     } 
 
-                    
-                    
-                    // let bonusPercent = parseInt(card.querySelector('.bonus-percent').innerText);
-                    let bonusPercent = card.querySelector('.bonus-percent') !== null ? parseInt(card.querySelector('.bonus-percent').innerText) ||  "-" : 1;
+                    let bonusPercent = card.querySelector(bonusPercent) !== null ? parseInt(card.querySelector(bonusPercent).innerText) ||  "-" : 1;
 
                     const total = calculateTotal(price, bonusPercent);
 

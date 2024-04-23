@@ -1,5 +1,5 @@
 {
-    "productCardsArr": ".catalog-items-list > div:not(.catalog-item_out-of-stock):not(.catalog-item_banner):not(.catalog-item_banner)",
+    "productCardsArr": ".catalog-items-list > div:not(.catalog-item_out-of-stock):not(.catalog-item_banner):not(.catalog-item-regular-desktop_out-of-stock)",
     "name": ".catalog-item-regular-desktop__main-info > a.ddl_product_link",
     "nameLink": ".catalog-item-regular-desktop__main-info > a.ddl_product_link",
     "shop": ".merchant-info__name",
